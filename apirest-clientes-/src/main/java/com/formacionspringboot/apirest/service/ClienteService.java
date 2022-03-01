@@ -14,6 +14,6 @@ public interface ClienteService {
 	
 	public void delete(Long id);
 	
-	public void delete_retorno(Long id);
+
 	
 }

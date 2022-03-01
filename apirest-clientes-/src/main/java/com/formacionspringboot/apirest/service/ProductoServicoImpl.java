@@ -3,61 +3,49 @@ package com.formacionspringboot.apirest.service;
 import java.util.List;
 
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.formacionspringboot.apirest.dao.ClienteDao;
-import com.formacionspringboot.apirest.entity.Cliente;
+import com.formacionspringboot.apirest.dao.ProductoDao;
+import com.formacionspringboot.apirest.entity.Producto;
 
 @Service
-public class ClienteServiceImpl implements ClienteService{
+public class ProductoServicoImpl implements ProductoService{
 
 	@Autowired
-	ClienteDao clienteDao;
+	ProductoDao productoDao;
+	
 	
 	@Override
 	@Transactional(readOnly=true)
-	public List<Cliente> findAll() {
-		return (List<Cliente>) clienteDao.findAll();
-	}
-
-	@Override
-	@Transactional(readOnly=true)
-	public Cliente findById(Long id) {
+	public List<Producto> findAll() {
 		// TODO Auto-generated method stub
-		return clienteDao.findById(id).orElse(null);
+		return (List<Producto>)productoDao.findAll();
 	}
 
-	
-	
+	@Override
+	@Transactional(readOnly=true)
+	public Producto findById(Long id) {
+		// TODO Auto-generated method stub
+		return productoDao.findById(id).orElse(null);
+	}
+
 	@Override
 	@Transactional
-	public Cliente save(Cliente cliente) {
+	public Producto save(Producto producto) {
 		// TODO Auto-generated method stub
-		
-		
-		
-		return clienteDao.save(cliente);
+		return productoDao.save(producto);
 	}
 
 	@Override
 	@Transactional
 	public void delete(Long id) {
 		// TODO Auto-generated method stub
-		clienteDao.deleteById(id);
+		productoDao.deleteById(id);;
+		
 	}
-	
-	@Override
-	@Transactional
-	public void delete_retorno(Long id) {
-
-			clienteDao.deleteById(id);
-	
-	}
-	
-	
-	
-	
 
 }

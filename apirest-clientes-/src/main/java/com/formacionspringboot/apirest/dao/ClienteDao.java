@@ -8,6 +8,4 @@ import com.formacionspringboot.apirest.entity.Cliente;
 @Repository
 public interface ClienteDao extends CrudRepository<Cliente,Long>{
 
-	
-	
 }

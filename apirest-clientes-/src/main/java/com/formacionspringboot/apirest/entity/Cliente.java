@@ -20,8 +20,10 @@ public class Cliente {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
+	@Column(nullable=false)
 	private String nombre;
 	private String apellido;
+	@Column(nullable=false, unique=true)
 	private String email;
 	private int telefono;
 	
@@ -29,9 +31,18 @@ public class Cliente {
 	@Temporal(TemporalType.DATE)
 	private Date createdAt;
 	
+	
+	/*Al guardar un nuevo objeto no nos guarda la fecha introducida, sino que nos 
+	 *genera siempre la misma fecha debido a @PrePersist, para corregir esto indicamos
+	 *que si la fecha es igual a null, entonces nos genere una fecha por defecto, sino no 
+	 * */
 	@PrePersist
 	public void prePersist() {
-		createdAt=new Date();
+		if(createdAt==null) {
+			createdAt=new Date();
+		}
+		
+		
 	}
 	
 	public Long getId() {
