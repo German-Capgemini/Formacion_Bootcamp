@@ -15,6 +15,4 @@ INSERT INTO jefes (dni, nombre, salario, telefono, departamento_id) VALUES ('766
 INSERT INTO jefes (dni, nombre, salario, telefono, departamento_id) VALUES ('88776778W', 'Alejandro', 2500, 987678765, 3);
 INSERT INTO jefes (dni, nombre, salario, telefono, departamento_id) VALUES ('87781122Z', 'Mateo', 3500, 987678765, 2);
 
-INSERT INTO usuario_cliente (nombre, password) VALUES ('user', 'user');
-INSERT INTO usuario_cliente (nombre, password) VALUES ('admin', 'admin');
 
