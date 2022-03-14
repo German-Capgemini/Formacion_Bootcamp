@@ -12,11 +12,12 @@ export class ListadoComponent {
       heroes:string[]=["Spiderman","Ironman",
       "Thor","Hulk","Capitan America"];
       borrados:string[]=[];
+      a:string | undefined;
+
       borrar():void{
 
-         var a:string| undefined;
-        a=this.heroes.pop();
-            this.borrados.push(a!);
+        this.a=this.heroes.pop();
+          this.borrados.push(this.a!);
       }
 
 
