@@ -3,10 +3,10 @@
   <input [(ngModel)]="parm1" name="parametro1" type="number"><br><br>
   <input  [(ngModel)]="parm2" name="parametro2" type="number"><br><br>
 
-
-
   <app-calcular [parametro1]="parm1" [parametro2]="parm2" (miEvento)="cogerResultado($event)"></app-calcular>
 
   <app-mostrar [variableResultado]="result"></app-mostrar>
 
 </form>
+
+
