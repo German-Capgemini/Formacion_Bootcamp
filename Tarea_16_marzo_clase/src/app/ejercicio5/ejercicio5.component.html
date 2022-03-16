@@ -1,0 +1,30 @@
+<p>ejercicio5 works!</p>
+<form>
+
+
+
+    <div  class="col-md-3">
+      <p>Introduce el monto total: </p>
+      <input type="text"  name="a" [(ngModel)]="monto"  class="form-control" placeholder="Introduce el monto total a destinar">
+    </div>
+
+
+
+<br>
+
+<div class="col-md-6">
+<label>En Urgencias se emplea el  {{porcentajes[0] | percent}}, que se corresponde con
+   {{importes[0] | currency:'EUR'}}</label>
+<br>
+<label>En Pediatria se emplea el  {{porcentajes[1] | percent}}, que se corresponde con
+  {{importes[1] | currency:'EUR'}}</label>
+<br>
+<label>En Traumatologia se emplea el  {{porcentajes[2] | percent}}, que se corresponde con
+  {{importes[2] | currency:'EUR'}}</label>
+<br>
+
+</div>
+<br>
+<button class="btn btn-primary" (click)="calculaImportes()">Calcular presupuesto detallado</button>
+<br>
+</form>

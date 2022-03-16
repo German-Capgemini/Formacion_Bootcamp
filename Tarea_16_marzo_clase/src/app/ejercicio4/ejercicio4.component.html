@@ -1,0 +1,30 @@
+<p>ejercicio4 works!</p>
+
+<form>
+
+<div class="row">
+  <div class="col-md-3">Nombre</div>
+  <div class="col-md-3">Salario</div>
+
+</div>
+<br>
+  <div class="row" *ngFor="let item of contador; let i = index">
+    <p>Empleado {{i+1}}</p>
+    <div class="col-md-3">
+      <input type="text"  name="a" [(ngModel)]="nombres[i]"  class="form-control" placeholder="Introduce el nombre">
+    </div>
+    <div class="col-md-3">
+      <input type="text" name="b"[(ngModel)]="salarios[i]"class="form-control" placeholder="Introduce el salario">
+    </div>
+
+  </div>
+
+<div >
+  <br>
+<label>El trabajador "{{trabajadorMayor}}" obtiene el mayor sueldo, que son {{salarioMayor | currency:'EUR'}}</label>
+</div>
+<br>
+
+<button class="btn btn-primary" (click)="obtieneMayor()">Calcular salario mayor</button>
+
+</form>

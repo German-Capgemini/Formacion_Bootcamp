@@ -1,0 +1,26 @@
+<p>ejercicio1 works!</p>
+
+<form >
+  <div class="col-md-3">
+    <label for="exampleInputEmail1">Numero 1: </label>
+    <input [(ngModel)]="num1" name="num1" type="number" class="form-control" placeholder="Introduce el primer numero" >
+  </div>
+
+  <div class="col-md-3">
+    <label for="exampleInputEmail1">Numero 2: </label>
+    <input [(ngModel)]="num2" name="num2"type="number" class="form-control" placeholder="Introduce el segundo numero">
+  </div>
+
+  <br>
+
+  <button class="btn btn-primary" (click)="suma()">Sumar</button>
+  <button class="btn btn-success" (click)="resta()">Restar</button>
+  <button class="btn btn-danger" (click)="multiplicacion()">Multiplicar</button>
+  <button class="btn btn-info" (click)="division()">Dividir</button>
+
+  <div class="form-group">
+
+  <label> Resultado: {{resultado}}</label>
+  </div>
+
+</form>

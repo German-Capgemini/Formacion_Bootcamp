@@ -1,0 +1,21 @@
+<p>ejercicio2 works!</p>
+
+<form >
+  <div class="col-md-3">
+    <label for="exampleInputEmail1">Introduce la base: </label>
+    <input [(ngModel)]="base" name="num1" type="number" class="form-control" placeholder="Introduce la base" >
+  </div>
+
+  <div class="col-md-3">
+    <label for="exampleInputEmail1">Introduce la altura: </label>
+    <input [(ngModel)]="altura" name="num2"type="number" class="form-control" placeholder="Introduce la altura">
+  </div>
+
+  <button class="btn btn-primary" (click)="calcular()">Calcular area</button>
+
+  <div class="form-group">
+
+  <label> Resultado: {{resultado}}</label>
+  </div>
+
+</form>
